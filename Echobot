@@ -1,0 +1,27 @@
+bot_template = "BOT : {0}"
+user_template = "USER : {0}"
+
+#DEFINE A FUNCTION THAT RESPONDS TO A USER'S MESSAGE
+def respond(message):
+    bot_message = "I can hear you! You said: " + message
+    #return the result
+    return bot_message 
+
+#testing function 
+print(respond("hello!"))
+
+
+#DEFINE A FUNCTION THAT SENDS A MESSAGE TO THE BOT: send_message 
+def send_message(message):
+     
+    #print user_template including the user_message 
+    print(user_template.format(message))
+    
+    #get the bot's response to the message
+    response = respond(message)
+    
+    #print the bot template including the bpt's response 
+    print(bot_template.format(response))
+    
+#send a message to the bot 
+send_message("hello")
